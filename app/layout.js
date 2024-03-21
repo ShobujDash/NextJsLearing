@@ -1,24 +1,23 @@
 import { Inter } from "next/font/google";
+import CustomLink from "./components/CustomLink";
 import "./globals.css";
-import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="border-b border-gray-400 p-4">
+        <nav className="p-4 border-b border-gray-400">
           <ul className="flex gap-5">
             <li>
-              <Link href="/">Home</Link>
+              <CustomLink path="/">Home</CustomLink>
             </li>
             <li>
-              <Link href="/dashboard/analytics">Analytics</Link>
+              <CustomLink path="/dashboard/analytics">Analytics</CustomLink>
             </li>
             <li>
-              <Link href="/dashboard/settings">Settings</Link>
+              <CustomLink path="/dashboard/settings">Settings</CustomLink>
             </li>
           </ul>
         </nav>
